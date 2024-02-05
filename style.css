@@ -144,7 +144,7 @@ header {
   transition: 0.5s;
 }
 .input-box input:focus ~ label,
-.input-box input:focus ~ :valid {
+.input-box input:valid ~ label {
   top: -5px;
 }
 .input-box input {
@@ -236,4 +236,10 @@ header {
   border-bottom-left-radius: 20px;
   cursor: pointer;
   z-index: 9;
+}
+.doneUp {
+  top: -5px !important;
+}
+.error {
+  border-bottom: 2px solid red;
 }
