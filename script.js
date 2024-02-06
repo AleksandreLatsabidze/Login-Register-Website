@@ -21,9 +21,19 @@ hideRegistr.addEventListener("click", () => {
 let inputUp = document.getElementById("inputUp");
 let emailUp = document.getElementById("emailUp");
 let inputBox = document.getElementById("input-box");
+let inputUps = document.getElementById("inputUps");
 
 var email = document.getElementById("inputUp").value;
 var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+inputUps.addEventListener("keydown", function () {
+  if (inputUps.value != "") {
+    emailUps.classList.add("doneUp");
+  } else {
+    emailUps.classList.remove("doneUp");
+    // inputBox.classList.remove("error");
+  }
+});
 
 inputUp.addEventListener("keydown", function () {
   if (inputUp.value != "") {
@@ -32,9 +42,9 @@ inputUp.addEventListener("keydown", function () {
     emailUp.classList.remove("doneUp");
     // inputBox.classList.remove("error");
   }
-  if (!emailRegex.test(email)) {
-    inputBox.classList.add("error");
-  } else {
-    inputBox.classList.remove("error");
-  }
+  // if (!emailRegex.test(email)) {
+  //   inputBox.classList.add("error");
+  // } else {
+  //   inputBox.classList.remove("error");
+  // }
 });
